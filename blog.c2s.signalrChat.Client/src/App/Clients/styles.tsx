@@ -1,0 +1,1 @@
+export const clientsListStyle = { height: "100%", overflowY: "auto" } as const;
