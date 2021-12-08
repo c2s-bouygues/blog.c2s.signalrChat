@@ -40,24 +40,5 @@ app.UseEndpoints(endpoints =>
     endpoints.MapHub<ChatHub>("/hub");
 });
 
-//app.Lifetime.ApplicationStarted.Register(() =>
-//{
-//    var serviceProvider = app.Services;
-//    var chatHub = serviceProvider.GetService<IHubContext<ChatHub>>();
-
-//    if(chatHub != null)
-//    {
-//        var timer = new System.Timers.Timer(1000)
-//        {
-//            Enabled = true
-//        };
-//        timer.Elapsed += new ElapsedEventHandler((Object sender, ElapsedEventArgs e) =>
-//        {
-//            chatHub.Clients.All.SendAsync("setTime", DateTime.Now.ToString("HH:mm:ss - dd/MM/yyyy"));
-//        });
-
-//        timer.Start();
-//    }
-//});
 
 app.Run();
